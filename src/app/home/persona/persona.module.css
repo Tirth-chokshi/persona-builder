@@ -1,0 +1,116 @@
+.comapny_details_container
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;   
+}
+.comapny_details
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    margin: 10px;
+    margin-top: 0;
+}
+.builder_cards_containder
+{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1100px;
+    margin-top: 30px;
+}
+
+.builder_cards
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: 300px;
+    width: 100%;
+    margin: 10px;
+    padding: 10px;
+}
+.builder_card_details
+{
+    margin-top: 10px;
+}
+.CardTitle
+{
+    margin-bottom: 10px;
+    font-size: 25px;
+}
+.grid_container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, auto));
+    gap: 10px;
+}
+
+.grid_item {
+    position: relative;
+    height: auto;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    border: 2px solid red;
+}
+
+.grid_item:before {
+    content: '';
+    display: block;
+    padding-top: 100%; /* 1:1 aspect ratio */
+}
+.grid_item .linkedIn
+{
+    position: relative;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    min-width: 300px;
+    min-height: 200px;
+}
+.grid_item .linkedIn .banner
+{
+    width: 95%;
+    height: auto;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+.grid_item .linkedIn .logo
+{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 50px;
+    left: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.company_linkedIn_details
+{
+    position: relative;
+    padding: 0;
+    width: 90%;
+    margin-top: 20px;
+}
+.labels
+{
+    position: relative;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-wrap: wrap;
+
+
+}
