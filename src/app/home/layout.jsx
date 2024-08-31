@@ -70,6 +70,7 @@ import {
 } from "@/components/ui/tooltip";
 
 import ModeToggle from "@/components/ModeToggle";
+import AccBar from "../../components/AccBar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -149,7 +150,7 @@ export default function RootLayout({ children }) {
             <Tooltip>
               <TooltipTrigger asChild>
                 <Link
-                  href="home/builder"
+                  href="/home/builder"
                   className="flex h-9 w-9 items-center justify-center rounded-lg text-muted-foreground transition-colors hover:text-foreground md:h-8 md:w-8"
                 >
                   {/* <LineChart className="h-5 w-5" /> */}
@@ -260,14 +261,8 @@ export default function RootLayout({ children }) {
                 />
               </Button>
             </DropdownMenuTrigger>
-            <DropdownMenuContent align="end">
-              <DropdownMenuLabel>My Account</DropdownMenuLabel>
-              <DropdownMenuSeparator />
-              <DropdownMenuItem>Settings</DropdownMenuItem>
-              <DropdownMenuItem>Support</DropdownMenuItem>
-              <DropdownMenuSeparator />
-              <DropdownMenuItem>Logout</DropdownMenuItem>
-            </DropdownMenuContent>
+
+          < AccBar/>
           </DropdownMenu>
           <ModeToggle />
         </header>
