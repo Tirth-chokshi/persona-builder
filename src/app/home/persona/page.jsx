@@ -59,7 +59,7 @@ export default function Persona() {
         params: { query: companyName },
         headers: {
           "x-rapidapi-key":
-            "9b5002932dmsh059c867ada41c65p14a53bjsnef4c60050ee0",
+            "",
           "x-rapidapi-host": "linkedin-data-scraper.p.rapidapi.com",
         },
       };
@@ -86,7 +86,7 @@ export default function Persona() {
         url: "https://linkedin-data-scraper.p.rapidapi.com/company",
         headers: {
           "x-rapidapi-key":
-            "9b5002932dmsh059c867ada41c65p14a53bjsnef4c60050ee0",
+            "",
           "x-rapidapi-host": "linkedin-data-scraper.p.rapidapi.com",
           "Content-Type": "application/json",
         },
