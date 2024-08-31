@@ -1,8 +1,10 @@
+'use client';
 import styles from "./builder.module.css";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import Image from "next/image";
+
 import {
   Sheet,
   SheetClose,
@@ -22,8 +24,18 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { Link } from "lucide-react";
+import { redirect } from "next/navigation"
 
 export default function Dashboard() {
+
+  
+  const redirect = () => {
+    redirect('/home/')
+
+  }
+  
+
   return (
     <>
       <Sheet>
@@ -78,9 +90,48 @@ export default function Dashboard() {
             </SheetTrigger>
           </div>
           <div className={styles.builder_cards_containder}>
+
+          
+            <Card className={styles.builder_cards}>
+              <Image
+                src="/images/msbcgroup_logo.jpeg"
+                alt="Image"
+                width="400"
+                height="400"
+                className="h-full object-cover rounded-[10px]"
+              />
+              <div className={styles.builder_card_details}>
+                <CardTitle className={styles.CardTitle}>
+                  Tech Rational
+                </CardTitle>
+                <CardDescription>
+                  Technology, Information and Media • London
+                </CardDescription>
+              </div>
+            </Card>
+       
+
+
             <Card className={styles.builder_cards}>
               <Image
                 src="/images/techr_logo.png"
+                alt="Image"
+                width="400"
+                height="400"
+                className="h-full object-cover rounded-[10px]"
+              />
+              <div className={styles.builder_card_details}>
+                <CardTitle className={styles.CardTitle}>
+                  Tech Rational
+                </CardTitle>
+                <CardDescription>
+                  Technology, Information and Media • London
+                </CardDescription>
+              </div>
+            </Card>
+            <Card className={styles.builder_cards}>
+              <Image
+                src="/images/msbcgroup_logo.jpeg"
                 alt="Image"
                 width="400"
                 height="400"
@@ -114,7 +165,7 @@ export default function Dashboard() {
             </Card>
             <Card className={styles.builder_cards}>
               <Image
-                src="/images/techr_logo.png"
+                src="/images/msbcgroup_logo.jpeg"
                 alt="Image"
                 width="400"
                 height="400"
@@ -146,74 +197,7 @@ export default function Dashboard() {
                 </CardDescription>
               </div>
             </Card>
-            <Card className={styles.builder_cards}>
-              <Image
-                src="/images/techr_logo.png"
-                alt="Image"
-                width="400"
-                height="400"
-                className="h-full object-cover rounded-[10px]"
-              />
-              <div className={styles.builder_card_details}>
-                <CardTitle className={styles.CardTitle}>
-                  Tech Rational
-                </CardTitle>
-                <CardDescription>
-                  Technology, Information and Media • London
-                </CardDescription>
-              </div>
-            </Card>
-            <Card className={styles.builder_cards}>
-              <Image
-                src="/images/techr_logo.png"
-                alt="Image"
-                width="400"
-                height="400"
-                className="h-full object-cover rounded-[10px]"
-              />
-              <div className={styles.builder_card_details}>
-                <CardTitle className={styles.CardTitle}>
-                  Tech Rational
-                </CardTitle>
-                <CardDescription>
-                  Technology, Information and Media • London
-                </CardDescription>
-              </div>
-            </Card>
-            <Card className={styles.builder_cards}>
-              <Image
-                src="/images/techr_logo.png"
-                alt="Image"
-                width="400"
-                height="400"
-                className="h-full object-cover rounded-[10px]"
-              />
-              <div className={styles.builder_card_details}>
-                <CardTitle className={styles.CardTitle}>
-                  Tech Rational
-                </CardTitle>
-                <CardDescription>
-                  Technology, Information and Media • London
-                </CardDescription>
-              </div>
-            </Card>
-            <Card className={styles.builder_cards}>
-              <Image
-                src="/images/techr_logo.png"
-                alt="Image"
-                width="400"
-                height="400"
-                className="h-full object-cover rounded-[10px]"
-              />
-              <div className={styles.builder_card_details}>
-                <CardTitle className={styles.CardTitle}>
-                  Tech Rational
-                </CardTitle>
-                <CardDescription>
-                  Technology, Information and Media • London
-                </CardDescription>
-              </div>
-            </Card>
+
           </div>
         </div>
         {/* ////////////////////// */}

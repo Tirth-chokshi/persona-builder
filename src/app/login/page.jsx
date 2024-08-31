@@ -10,7 +10,7 @@ export default function Component() {
     if (session) {
 
         const router = useRouter();
-          router.push('/home/persona');
+          router.push('/home/builder');
 
         return (
             <>

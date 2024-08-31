@@ -33,7 +33,7 @@ import {
 } from "@/components/ui/sheet";
 import { Badge } from "@/components/ui/badge";
 
-export default function Persona() {
+export default async function Persona() {
   const { data: session, status } = useSession();
   const [isVisible, setIsVisible] = useState(false);
 
@@ -75,7 +75,7 @@ export default function Persona() {
       }
     };
 
-    const handleCompanyClick = async (urn) => {
+    const handleCompanyClick = (urn) => {
       setLoading(true);
       setError(null);
       setSelectedCompany(null);
@@ -96,7 +96,7 @@ export default function Persona() {
       };
 
       try {
-        const response = await axios.request(options);
+        const response =  axios.request(options);
         setSelectedCompany(response.data.data);
       } catch (error) {
         setError("An error occurred while fetching company details.");

@@ -103,7 +103,7 @@ export default function RootLayout({ children }) {
             <Tooltip>
               <TooltipTrigger asChild>
                 <Link
-                  href="/home"
+                  href="/home/builder"
                   className="flex h-9 w-9 items-center justify-center rounded-lg text-muted-foreground transition-colors hover:text-foreground md:h-8 md:w-8"
                 >
                 <HomeIcon/>
@@ -114,7 +114,7 @@ export default function RootLayout({ children }) {
             <Tooltip>
               <TooltipTrigger asChild>
                 <Link
-                  href="#"
+                  href="/home/msbe-profile"
                   className="flex h-9 w-9 items-center justify-center rounded-lg transition-colors hover:text-foreground md:h-8 md:w-8"
                 >
                   <ShoppingCart className="h-5 w-5" />
