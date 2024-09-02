@@ -48,12 +48,6 @@ const SearchC = () => {
               "subtitle": "Company • Business Consulting and Services",
               "image": "https://media.licdn.com/dms/image/v2/D4E0BAQHEcjHcL0TYiQ/company-logo_200_200/company-logo_200_200/0/1688492342790?e=1733356800&v=beta&t=Xv4ox-jLgJI0pqNU7RVXOYj0C1TswoUFnP0JWpAYZu0"
             },
-            {
-              "urn": "65302922",
-              "title": "Mena Smart Business Open Community (MSBC Group)",
-              "subtitle": "Company • IT Services and IT Consulting",
-              "image": "https://media.licdn.com/dms/image/v2/C4D0BAQESHZ-5r4yrmw/company-logo_200_200/company-logo_200_200/0/1630529548297/mena_smart_business_open_community_logo?e=1733356800&v=beta&t=ys8_o0KjoiWTQJGKF_1wdVlULOB0hWPpoWe2ZJRCcGI"
-            }
           ]
         });
       } else {
@@ -103,7 +97,7 @@ const SearchC = () => {
     <div className="container mx-auto p-4 max-w-4xl">
       <Card className="mb-8">
         <CardHeader>
-          <CardTitle className="text-2xl font-bold">Company Search</CardTitle>
+          <CardTitle className="text-2xl font-bold">Search</CardTitle>
         </CardHeader>
         <CardContent>
           <form onSubmit={handleSearch} className="flex space-x-2">
@@ -111,10 +105,10 @@ const SearchC = () => {
               type="text"
               value={companyName}
               onChange={(e) => setCompanyName(e.target.value)}
-              placeholder="Enter company name"
+              placeholder="Enter company or individual name"
               className="flex-grow"
             />
-            <Button type="submit" disabled={loading}>
+            <Button type="submit" disabled={loading}> 
               {loading ? 'Searching...' : 'Search'}
               <Search className="ml-2 h-4 w-4" />
             </Button>
@@ -131,7 +125,7 @@ const SearchC = () => {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div>
-          <h2 className="text-xl font-semibold mb-4">Search Results</h2>
+          {/* <h2 className="text-xl font-semibold mb-4">Search Results</h2> */}
           {results && results.success && results.suggestions.length > 0 ? (
             <div className="space-y-4">
               {results.suggestions.map((company) => (
@@ -151,11 +145,12 @@ const SearchC = () => {
               ))}
             </div>
           ) : (
-            <p className="text-gray-600">No results found.</p>
+            // <p className="text-gray-600">No results found.</p>
+            <p></p>
           )}
         </div>
 
-        <div>
+        {/* <div>
           <h2 className="text-xl font-semibold mb-4">Company Details</h2>
           {selectedCompany ? (
             <Card>
@@ -191,7 +186,7 @@ const SearchC = () => {
           ) : (
             <p className="text-gray-600">Select a company to view details.</p>
           )}
-        </div>
+        </div> */}
       </div>
     </div>
   );

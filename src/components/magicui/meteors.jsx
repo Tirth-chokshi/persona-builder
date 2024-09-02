@@ -35,4 +35,4 @@ export const Meteors = ({
   </>);
 };
 
-export default Meteors;
+export default Meteors

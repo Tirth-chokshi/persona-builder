@@ -2,9 +2,22 @@
 import { useSession, signIn, signOut } from "next-auth/react"
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
+import { redirect } from "next/navigation"
+import { useEffect } from "react"
+
+//   if (status === "loading") {
+//     return <p>Loading...</p>
+//   }
+
 
 export default function Component() {
-    const { data: session } = useSession()
+    const { data: session,status } = useSession()
+    useEffect(() => {
+        if (status === "authenticated") {
+          redirect('/')
+        }
+      }, [status])
+    
     if (session) {
         return (
             <>
